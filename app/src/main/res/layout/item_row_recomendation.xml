@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    >
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_bg"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/thumbnail_card"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp"
+            android:layout_margin="10dp">
+            <ImageView
+                android:id="@+id/img_item_photo"
+                android:layout_width="61dp"
+                android:layout_height="52dp"
+                android:src="@drawable/jagung"
+                android:scaleType="centerCrop" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/food_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jagung"
+            android:textColor="@color/black"
+            android:textAlignment="textStart"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="30dp"
+            android:textSize="15sp"
+            />
+    </LinearLayout>
+</LinearLayout>

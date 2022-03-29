@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:paddingBottom="37dp"
+            android:text="Registrasi"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:fontFamily="@font/comicceue_bold"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/form"
+            android:hint="Username"
+            android:paddingLeft="20dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="18dp"
+            android:textColorHint="@color/black"
+            android:fontFamily="@font/comicceue_bold"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/form"
+            android:hint="Email"
+            android:paddingLeft="20dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="18dp"
+            android:textColorHint="@color/black"
+            android:fontFamily="@font/comicceue_bold"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/form"
+            android:hint="@string/password"
+            android:paddingLeft="20dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="18dp"
+            android:textColorHint="@color/black"
+            android:fontFamily="@font/comicceue_bold"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/form"
+            android:hint="@string/confirm_password"
+            android:paddingLeft="20dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="18dp"
+            android:textColorHint="@color/black"
+            android:fontFamily="@font/comicceue_bold"
+            />
+
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="289dp"
+            android:layout_height="wrap_content"
+            android:text="@string/register"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="@color/green_button_primary"
+            android:textColor="@color/white"
+            android:background="@drawable/button_primary"
+            android:fontFamily="@font/comicceue_bold"
+            android:textSize="20sp"
+            android:layout_marginTop="24dp"
+            android:inputType="textCapSentences"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Already have an account ?"
+            android:paddingLeft="20dp"
+            android:paddingTop="45dp"
+            android:textColor="@color/grey"
+            android:textSize="15sp"
+            android:fontFamily="@font/comicceue_bold"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:paddingLeft="20dp"
+            android:paddingTop="3dp"
+            android:textColor="@color/green_button_primary"
+            android:textSize="20sp"
+            android:fontFamily="@font/comicceue_bold"
+            />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
