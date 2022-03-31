@@ -5,6 +5,7 @@
       <map>
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2234375" />
         <entry key="app/src/main/res/drawable/button_back.xml" value="0.2234375" />
+        <entry key="app/src/main/res/drawable/button_category.xml" value="0.2234375" />
         <entry key="app/src/main/res/drawable/button_normal.xml" value="0.2234375" />
         <entry key="app/src/main/res/drawable/button_primary.xml" value="0.1078125" />
         <entry key="app/src/main/res/drawable/button_secondary.xml" value="0.1" />
@@ -15,24 +16,29 @@
         <entry key="app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.2234375" />
         <entry key="app/src/main/res/drawable/ic_baseline_lock_24.xml" value="0.2234375" />
         <entry key="app/src/main/res/drawable/ic_baseline_phone_24.xml" value="0.2234375" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.22" />
         <entry key="app/src/main/res/drawable/rounded_picture.xml" value="0.11458333333333333" />
         <entry key="app/src/main/res/drawable/shape.xml" value="0.2234375" />
         <entry key="app/src/main/res/drawable/splash_screen_bg.xml" value="0.11458333333333333" />
+        <entry key="app/src/main/res/drawable/user_profile_photo.xml" value="0.2234375" />
+        <entry key="app/src/main/res/drawable/users_profile_bg.xml" value="0.2234375" />
         <entry key="app/src/main/res/font/font.xml" value="0.2375" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.24343015214384509" />
-        <entry key="app/src/main/res/layout/congrats.xml" value="0.13" />
+        <entry key="app/src/main/res/layout/congrats.xml" value="0.22" />
         <entry key="app/src/main/res/layout/detailfood.xml" value="0.18" />
         <entry key="app/src/main/res/layout/diagnosis.xml" value="0.196875" />
-        <entry key="app/src/main/res/layout/explore.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/explore.xml" value="0.22" />
         <entry key="app/src/main/res/layout/item_row_information_explore.xml" value="0.25" />
         <entry key="app/src/main/res/layout/item_row_recomendation.xml" value="0.22" />
         <entry key="app/src/main/res/layout/item_row_strict.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/login.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/recomendation.xml" value="0.17855540601166442" />
+        <entry key="app/src/main/res/layout/login.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/profile.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/profileuser.xml" value="0.1671195652173913" />
+        <entry key="app/src/main/res/layout/recomendation.xml" value="0.25" />
         <entry key="app/src/main/res/layout/register.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/splash_screen.xml" value="0.12" />
+        <entry key="app/src/main/res/layout/splash_screen.xml" value="0.25" />
         <entry key="app/src/main/res/menu/bottom_navigation_menu.xml" value="0.20729166666666668" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.11458333333333333" />
       </map>
