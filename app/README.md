@@ -1,0 +1,3 @@
+# Better Me App
+
+#### This is a Macro Project from Nongsa Digital Park Batam for Study Independen. Still on progress....
