@@ -12,6 +12,6 @@
     <color name="blue">#FF367CFF</color>
     <color name="green_button_primary">#7CC373</color>
     <color name="grey_button_secondary">#B3C4C4C4</color>
+    <color name="grey_button_active">#009C41</color>
 
-    B3C4C4C4
 </resources>

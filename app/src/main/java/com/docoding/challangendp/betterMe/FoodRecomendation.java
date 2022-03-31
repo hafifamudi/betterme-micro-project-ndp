@@ -41,4 +41,5 @@ public class FoodRecomendation {
 
         return list;
     }
+
 }

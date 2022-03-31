@@ -4,19 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".betterMe.ExploreActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalScrollView2">
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:layout_marginBottom="34dp"
-            android:src="@drawable/explore_image" />
+            android:src="@drawable/explore_image"
+            android:adjustViewBounds="true"
+            />
 
         <TextView
             android:layout_width="match_parent"
@@ -38,13 +41,12 @@
     </LinearLayout>
 
     <HorizontalScrollView
-        android:id="@+id/food_category"
+        android:id="@+id/horizontalScrollView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:measureAllChildren="false"
         android:scrollbars="none"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout">
+        app:layout_constraintBottom_toTopOf="@+id/food_article">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -100,7 +102,9 @@
                 android:fontFamily="@font/comicneue_regular"
                 android:inputType="textCapSentences"
                 android:padding="2dp"
+                android:backgroundTint="@color/grey_button_active"
                 android:text="Makanan"
+                android:textColor="@color/white"
                 android:textSize="11sp" />
 
             <Button
@@ -118,41 +122,35 @@
 
     </HorizontalScrollView>
 
-    <LinearLayout
+
+    <androidx.core.widget.NestedScrollView
         android:id="@+id/food_article"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@+id/food_category">
+        android:layout_height="420dp"
+        app:layout_constraintBottom_toBottomOf="parent">
 
-        <androidx.core.widget.NestedScrollView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/food_recomendation"
+                android:id="@+id/food_explore_information"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="40dp"
+                android:layout_marginBottom="50dp"
                 tools:listitem="@layout/item_row_information_explore" />
-        </androidx.core.widget.NestedScrollView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:id="@+id/linearLayout2"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout">
-
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottom_navigation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:itemBackground="@color/white"
-            app:itemIconTint="@color/black"
-            app:menu="@menu/bottom_navigation_menu" />
-    </LinearLayout>
+        app:itemBackground="@color/white"
+        app:itemIconTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/food_article"
+        app:menu="@menu/bottom_navigation_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

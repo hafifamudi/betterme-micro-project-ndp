@@ -1,14 +1,20 @@
 package com.docoding.challangendp.betterMe;
 
-import android.os.Parcel;
-import android.os.Parcelable;
-
 import java.io.Serializable;
 
 public class Food implements Serializable {
     private String name;
     private int photo;
     private String detail;
+    private String category;
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
 
     public String getDetail() {
         return detail;

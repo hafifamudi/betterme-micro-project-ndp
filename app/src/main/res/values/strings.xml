@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">ChallangeNDP</string>
     <string name="login">Login</string>
-    <string name="don_t_have_an_account">Don\'t have an account ?</string>
-    <string name="already_have_an_accoutnt">Already have an account ?</string>
+    <string name="don_t_have_an_account">Belum punya akun ?</string>
+    <string name="already_have_an_accoutnt">Sudah punya akun ?</string>
     <string name="register">Register</string>
     <string name="sign_up">Sign Up</string>
     <string name="continue_signup">Continue</string>
@@ -20,6 +20,6 @@
     <string name="home"></string>
     <string name="explore"></string>
     <string name="profile"></string>
-    <string name="select_the_information_you_want">select the information you want</string>
+    <string name="select_the_information_you_want">pilih informasi yang anda inginkan</string>
     <string name="better_me">Better Me</string>
 </resources>

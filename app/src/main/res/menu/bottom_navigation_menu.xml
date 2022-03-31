@@ -1,19 +1,21 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     >
     <item
-        android:id="@+id/page_1"
+        android:id="@+id/home_recomendation_page"
         android:enabled="true"
         android:icon="@drawable/home_icon"
         android:title="@string/home"/>
     <item
-        android:id="@+id/page_2"
+        android:id="@+id/explore_page"
         android:enabled="true"
         android:icon="@drawable/explore_icon"
         android:title="@string/explore"/>
 
     <item
-        android:id="@+id/page_3"
+        android:id="@+id/user_profile_page"
         android:enabled="true"
         android:icon="@drawable/users_icon_button"
         android:title="@string/profile"/>
+
+
 </menu>

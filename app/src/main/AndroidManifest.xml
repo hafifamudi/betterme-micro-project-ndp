@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
         <activity
+            android:name=".betterMe.ProfileuserActivity"
+            android:exported="true" />
+        <activity
             android:name=".betterMe.DetailfoodActivity"
             android:exported="true" />
         <activity
@@ -21,20 +24,10 @@
         <activity
             android:name=".betterMe.RecomendationActivity"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
-            >
-
-        </activity>
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"></activity>
         <activity
             android:name=".betterMe.ExploreActivity"
             android:exported="true">
-
-
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".betterMe.CongratsActivity"
@@ -47,7 +40,14 @@
             android:exported="true" />
         <activity
             android:name=".betterMe.SplashScreenActivity"
-            android:exported="true"></activity>
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".LoginActivity"
             android:exported="true"

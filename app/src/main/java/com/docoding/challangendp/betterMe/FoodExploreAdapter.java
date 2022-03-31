@@ -15,40 +15,29 @@ import com.docoding.challangendp.R;
 
 import java.util.ArrayList;
 
-public class FoodRecomendationAdapter extends RecyclerView.Adapter<FoodRecomendationAdapter.FoodRecomendationViewHolder>{
+public class FoodExploreAdapter extends RecyclerView.Adapter<FoodExploreAdapter.FoodExploreViewHolder> {
     private ArrayList<Food> listFood;
-    private OnItemClickCallback onItemClickCallback;
 
-    public FoodRecomendationAdapter(ArrayList<Food> list) {
+    public FoodExploreAdapter(ArrayList<Food> list) {
         this.listFood = list;
-    }
-
-    public void setOnItemClickCallback(OnItemClickCallback onItemClickCallback) {
-        this.onItemClickCallback = onItemClickCallback;
     }
 
     @NonNull
     @Override
-    public FoodRecomendationAdapter.FoodRecomendationViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_row_recomendation, parent, false);
-        return new FoodRecomendationViewHolder(view);
+    public FoodExploreAdapter.FoodExploreViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_row_information_explore, parent, false);
+        return new FoodExploreViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull FoodRecomendationAdapter.FoodRecomendationViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull FoodExploreViewHolder holder, int position) {
         Food food = listFood.get(position);
         Glide.with(holder.itemView.getContext())
                 .load(food.getPhoto())
                 .apply(new RequestOptions().override(61, 52))
                 .into(holder.imgPhoto);
         holder.foodTitle.setText(food.getName());
-
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onItemClickCallback.onItemClicked(food);
-            }
-        });
+        holder.foodCategory.setText(food.getCategory());
     }
 
     @Override
@@ -56,14 +45,18 @@ public class FoodRecomendationAdapter extends RecyclerView.Adapter<FoodRecomenda
         return listFood.size();
     }
 
-    public class FoodRecomendationViewHolder extends RecyclerView.ViewHolder {
+
+    public class FoodExploreViewHolder extends RecyclerView.ViewHolder {
         ImageView imgPhoto;
         TextView foodTitle;
-        public FoodRecomendationViewHolder(@NonNull View itemView) {
+        TextView foodCategory;
+
+        public FoodExploreViewHolder(@NonNull View itemView) {
             super(itemView);
 
             imgPhoto = itemView.findViewById(R.id.img_item_photo);
             foodTitle = itemView.findViewById(R.id.food_title);
+            foodCategory = itemView.findViewById(R.id.food_title_category);
         }
     }
 }

@@ -87,7 +87,6 @@
                 android:layout_height="32dp"
                 android:text="@string/More"
                 android:layout_gravity="center_horizontal"
-                android:backgroundTint="@color/black"
                 android:textColor="@color/black"
                 android:background="@drawable/button_secondary"
                 android:fontFamily="@font/comicceue_bold"

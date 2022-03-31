@@ -1,5 +1,6 @@
 package com.docoding.challangendp.betterMe;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -7,14 +8,16 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
+import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.docoding.challangendp.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 
 public class RecomendationActivity extends AppCompatActivity {
-    private RecyclerView food_recomen, food_strict;
+    private RecyclerView foodRecomend, foodStrict;
     private ArrayList<Food> listRecomendFood = new ArrayList<>();
     private ArrayList<Food> listStrictFood = new ArrayList<>();
 
@@ -23,11 +26,14 @@ public class RecomendationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.recomendation);
 
-        food_recomen = findViewById(R.id.food_recomendation);
-        food_recomen.setHasFixedSize(true);
+        BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
+        bottomNav.setOnNavigationItemSelectedListener(navListener);
 
-        food_strict = findViewById(R.id.food_strict);
-        food_strict.setHasFixedSize(true);
+        foodRecomend = findViewById(R.id.food_recomendation);
+        foodRecomend.setHasFixedSize(true);
+
+        foodStrict = findViewById(R.id.food_strict);
+        foodStrict.setHasFixedSize(true);
 
         listRecomendFood.addAll(FoodRecomendation.ListData());
         listStrictFood.addAll(FoodStrict.ListData());
@@ -37,9 +43,9 @@ public class RecomendationActivity extends AppCompatActivity {
     }
 
     public void showRecycleListFoodRecomendation() {
-        food_recomen.setLayoutManager(new LinearLayoutManager(this));
+        foodRecomend.setLayoutManager(new LinearLayoutManager(this));
         FoodRecomendationAdapter listFoodRecomendationAdapter = new FoodRecomendationAdapter(listRecomendFood);
-        food_recomen.setAdapter(listFoodRecomendationAdapter);
+        foodRecomend.setAdapter(listFoodRecomendationAdapter);
 
         listFoodRecomendationAdapter.setOnItemClickCallback(new OnItemClickCallback() {
             @Override
@@ -52,8 +58,28 @@ public class RecomendationActivity extends AppCompatActivity {
     }
 
     public void showRecycleListFoodStrict() {
-        food_strict.setLayoutManager(new LinearLayoutManager(this));
+        foodStrict.setLayoutManager(new LinearLayoutManager(this));
         FoodStrictAdapter listFoodStrictAdapter = new FoodStrictAdapter(listStrictFood);
-        food_strict.setAdapter(listFoodStrictAdapter);
+        foodStrict.setAdapter(listFoodStrictAdapter);
     }
+
+    private BottomNavigationView.OnNavigationItemSelectedListener navListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            switch (item.getItemId()) {
+                case R.id.home_recomendation_page:
+                    Toast.makeText(RecomendationActivity.this, "You're in the recomendation page", Toast.LENGTH_SHORT).show();
+                    break;
+                case R.id.explore_page:
+                    Intent recomendationActivity = new Intent(RecomendationActivity.this, ExploreActivity.class);
+                    startActivity(recomendationActivity);
+                    break;
+                case R.id.user_profile_page:
+                    Intent userProfileActivity = new Intent(RecomendationActivity.this, ProfileActivity.class);
+                    startActivity(userProfileActivity);
+                    break;
+            }
+            return true;
+        }
+    };
 }

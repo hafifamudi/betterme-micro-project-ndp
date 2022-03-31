@@ -1,9 +1,263 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout  xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".betterMe.ProfileActivity">
+    tools:context=".betterMe.ProfileActivity"
+    android:orientation="vertical">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="50dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="70dp"
+                >
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/user_profile_photo"
+                    />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/user_icon_profile"
+                    android:layout_gravity="center"
+
+                    />
+            </FrameLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ubah Profil"
+                android:textSize="20dp"
+                android:fontFamily="@font/comicceue_bold"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="38dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                >
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Nama"
+                    android:fontFamily="@font/comicceue_bold"
+                    android:textSize="18sp"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="16dp"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                >
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Umur"
+                    android:fontFamily="@font/comicceue_bold"
+                    android:textSize="18sp"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="16dp"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                >
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Kegiatan Sehari-hari"
+                    android:fontFamily="@font/comicceue_bold"
+                    android:textSize="18sp"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="16dp"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                >
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Penyakit"
+                    android:fontFamily="@font/comicceue_bold"
+                    android:textSize="18sp"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="16dp"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+            <Button
+                android:layout_width="149dp"
+                android:layout_height="wrap_content"
+                android:text="Ubah Data"
+                android:background="@drawable/button_primary"
+                android:layout_marginTop="36dp"
+                android:layout_marginBottom="37dp"
+                android:inputType="textCapSentences"
+                android:fontFamily="@font/comicceue_bold"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                >
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Password Lama"
+                    android:fontFamily="@font/comicceue_bold"
+                    android:textSize="18sp"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="16dp"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                >
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Password Baru"
+                    android:fontFamily="@font/comicceue_bold"
+                    android:textSize="18sp"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="16dp"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                >
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Confirm Password"
+                    android:fontFamily="@font/comicceue_bold"
+                    android:textSize="18sp"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="16dp"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+
+            <Button
+                android:layout_width="149dp"
+                android:layout_height="wrap_content"
+                android:text="Ubah Password"
+                android:background="@drawable/button_primary"
+                android:layout_marginTop="30dp"
+                android:inputType="textCapSentences"
+                android:fontFamily="@font/comicceue_bold"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                />
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemBackground="@color/white"
+        app:itemIconTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/bottom_navigation_menu" />
 </androidx.constraintlayout.widget.ConstraintLayout>
